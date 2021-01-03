@@ -20,6 +20,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/lass" />
 
+    <Button
+        android:id="@+id/start_game"
+        android:layout_width="128dp"
+        android:layout_height="164dp"
+        android:background="#00FFFFFF"
+        android:onClick="start_game"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/krolik"
+        app:layout_constraintEnd_toEndOf="@+id/krolik"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/krolik"
+        app:layout_constraintTop_toTopOf="@+id/krolik"
+        app:layout_constraintVertical_bias="0.0" />
+
     <ImageView
         android:id="@+id/krolik"
         android:layout_width="128dp"
@@ -54,19 +68,6 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/start-game"
-        android:layout_width="128dp"
-        android:layout_height="164dp"
-        android:text="Start"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/krolik"
-        app:layout_constraintEnd_toEndOf="@+id/krolik"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/krolik"
-        app:layout_constraintTop_toTopOf="@+id/krolik"
-        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/difficulty"

@@ -15,6 +15,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, difficulty.class);
         startActivity(intent);
     }
+
+    public void start_game(View view){
+        Intent intent = new Intent(MainActivity.this, gra.class);
+        startActivity(intent);
+    }
     
 
     @Override
