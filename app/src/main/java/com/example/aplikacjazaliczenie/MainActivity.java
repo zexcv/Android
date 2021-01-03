@@ -10,22 +10,19 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
     private Button button;
 
+
+    public void settings(View view){
+        Intent intent = new Intent(MainActivity.this, difficulty.class);
+        startActivity(intent);
+    }
+    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button = findViewById(R.id.difficulty);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, difficulty.class);
-                startActivity(intent);
-
-
-            }
-        });
+        }
     }
 
 
-}
