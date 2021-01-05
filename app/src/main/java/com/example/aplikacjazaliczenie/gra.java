@@ -10,6 +10,7 @@ import android.os.Handler;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.view.View;
@@ -21,7 +22,7 @@ public class gra extends AppCompatActivity {
 
     TextView textView;
     TextView zegarek;
-    double wynik = 0;
+    int wynik = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,8 +62,29 @@ public class gra extends AppCompatActivity {
 
         }
 
-        public void addpoints(View view){
+
+        public void addpoints1(View view){
+        Button guziklewy = (Button)findViewById(R.id.buttonkrolik1);
+        Button guzikprawy = (Button)findViewById(R.id.buttonkrolik2);
+        ImageView kroliklewy = (ImageView)findViewById(R.id.krolik1);
+        ImageView krolikprawy = (ImageView)findViewById(R.id.krolik2);
+        kroliklewy.setVisibility(View.INVISIBLE);
+        guziklewy.setVisibility(View.INVISIBLE);
+        krolikprawy.setVisibility(View.VISIBLE);
+        guzikprawy.setVisibility(View.VISIBLE);
         wynik++;
         }
+
+        public void addpoints2(View view){
+        Button guziklewy = (Button)findViewById(R.id.buttonkrolik1);
+        Button guzikprawy = (Button)findViewById(R.id.buttonkrolik2);
+        ImageView kroliklewy = (ImageView)findViewById(R.id.krolik1);
+        ImageView krolikprawy = (ImageView)findViewById(R.id.krolik2);
+        krolikprawy.setVisibility(View.INVISIBLE);
+        guzikprawy.setVisibility(View.INVISIBLE);
+        kroliklewy.setVisibility(View.VISIBLE);
+        guziklewy.setVisibility(View.VISIBLE);
+        wynik++;
+    }
 
     }
