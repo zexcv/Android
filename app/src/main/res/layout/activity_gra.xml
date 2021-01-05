@@ -82,5 +82,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/zegarek" />
 
+    <Button
+        android:id="@+id/buttonkrolik1"
+        android:layout_width="115dp"
+        android:layout_height="215dp"
+        android:background="#00FFFFFF"
+        android:onClick="addpoints"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.158"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.333" />
+
+    <Button
+        android:id="@+id/buttonkrolik2"
+        android:layout_width="116dp"
+        android:layout_height="213dp"
+        android:background="#00FFFFFF"
+        android:onClick="addpoints"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.81"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.341" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

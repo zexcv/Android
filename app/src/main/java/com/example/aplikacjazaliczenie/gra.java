@@ -12,9 +12,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import android.view.View;
 import org.w3c.dom.Text;
-
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
@@ -22,13 +21,7 @@ public class gra extends AppCompatActivity {
 
     TextView textView;
     TextView zegarek;
-
-//    private TextView countdown;
-//    private Button countownbtn1;
-//    private Button countownbtn2;
-//    private CountDownTimer countDownTimer;
-//    private long timeLeft = 15000; // 15 sekund
-//    private boolean timeRunning;
+    double wynik = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +30,10 @@ public class gra extends AppCompatActivity {
 
         TextView textView = (TextView)findViewById(R.id.tutorial);
         textView.startAnimation(AnimationUtils.loadAnimation(gra.this,R.anim.pulse));
-
         final TextView zegarek = (TextView)findViewById(R.id.zegarek);
         final TextView ikona = (TextView)findViewById(R.id.zegar);
         ikona.startAnimation(AnimationUtils.loadAnimation(gra.this,R.anim.pulse));
+
 
         long duration = TimeUnit.MINUTES.toMillis(1);
 
@@ -57,78 +50,19 @@ public class gra extends AppCompatActivity {
 
             @Override
             public void onFinish() {
+                global global = new global();
 
                 Toast.makeText(getApplicationContext(),"KONIEC CZASU", Toast.LENGTH_LONG).show();
-                Toast.makeText(getApplicationContext(),"WYNIK: ", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"WYNIK: " + wynik , Toast.LENGTH_LONG).show();
                 setContentView(R.layout.activity_main);
 
             }
         }.start();
 
-//        countdown = findViewById(R.id.countdown_txt);
-//        countownbtn1 = findViewById(R.id.krolik1);
-//        countownbtn2 = findViewById(R.id.krolik2);
-
-//        countownbtn1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//            startStop();
-//            }
-//        });
-//
-//        updateTimer();
-//
-//        countownbtn2.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//             startStop();
-//            }
-//        });
-//
-//        }
-//
-//        public void startStop(){
-//        if (timeRunning){
-//
-//        } else {
-//            startTimer();
-//        }
-//        }
-//        public void startTimer(){
-//        countDownTimer = new CountDownTimer(timeLeft,1000) {
-//            @Override
-//            public void onTick(long l) {
-//                timeLeft = l;
-//                updateTimer();
-//
-//
-//            }
-//
-//            @Override
-//            public void onFinish() {
-//
-//            }
-//        }.start();
-//
-//
-//        timeRunning = true;
-//        }
-//        public void stopTimer(){
-//        countDownTimer.cancel();
-//        timeRunning = false;
-//        }
-//
-//        public void updateTimer(){
-//        int minutes = (int) timeLeft / 15000;
-//        int seconds = (int) timeLeft % 15000 / 1000;
-//
-//        String timeLeftTxt;
-//
-//        timeLeftTxt = "" + minutes;
-//        timeLeftTxt += ":";
-//        if(seconds < 10) timeLeftTxt += "0";
-//        timeLeftTxt += seconds;
-//
-//        countdown.setText(timeLeftTxt);
         }
+
+        public void addpoints(View view){
+        wynik++;
+        }
+
     }

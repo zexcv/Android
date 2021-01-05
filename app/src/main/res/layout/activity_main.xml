@@ -27,15 +27,15 @@
         android:background="#00FFFFFF"
         android:onClick="start_game"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/krolik"
-        app:layout_constraintEnd_toEndOf="@+id/krolik"
+        app:layout_constraintBottom_toBottomOf="@+id/zajac"
+        app:layout_constraintEnd_toEndOf="@+id/zajac"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/krolik"
-        app:layout_constraintTop_toTopOf="@+id/krolik"
+        app:layout_constraintStart_toStartOf="@+id/zajac"
+        app:layout_constraintTop_toTopOf="@+id/zajac"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/krolik"
+        android:id="@+id/zajac"
         android:layout_width="128dp"
         android:layout_height="164dp"
         android:layout_marginStart="90dp"
