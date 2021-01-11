@@ -20,8 +20,6 @@ import java.util.concurrent.TimeUnit;
 
 public class gra extends AppCompatActivity {
 
-    TextView textView;
-    TextView zegarek;
     int wynik = 0;
 
     @Override
@@ -36,7 +34,18 @@ public class gra extends AppCompatActivity {
         ikona.startAnimation(AnimationUtils.loadAnimation(gra.this,R.anim.pulse));
 
 
-        long duration = TimeUnit.MINUTES.toMillis(1);
+        double czas = 0;
+        global global = new global();
+        if(global.getDlevel() == 3){
+            czas = 1;
+        }
+        if(global.getDlevel() == 2){
+            czas = 0.5;
+        }
+        if(global.getDlevel() == 1){
+            czas = 0.25;
+        }
+        long duration = TimeUnit.MINUTES.toMillis((long) czas);
 
         new CountDownTimer(duration, 1000) {
             @Override

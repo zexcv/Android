@@ -4,7 +4,6 @@ public class global {
 
     private double dlevel;
 
-
     public double getDlevel() {
         return dlevel;
     }
