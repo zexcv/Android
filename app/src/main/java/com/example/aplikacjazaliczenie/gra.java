@@ -34,18 +34,7 @@ public class gra extends AppCompatActivity {
         ikona.startAnimation(AnimationUtils.loadAnimation(gra.this,R.anim.pulse));
 
 
-        double czas = 0;
-        global global = new global();
-        if(global.getDlevel() == 3){
-            czas = 1;
-        }
-        if(global.getDlevel() == 2){
-            czas = 0.5;
-        }
-        if(global.getDlevel() == 1){
-            czas = 0.25;
-        }
-        long duration = TimeUnit.MINUTES.toMillis((long) czas);
+        long duration = TimeUnit.MINUTES.toMillis(1);
 
         new CountDownTimer(duration, 1000) {
             @Override
