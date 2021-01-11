@@ -11,3 +11,13 @@
 As user click's one of them, it will disappear and the other one will show up. Action is to be repeated until time runs out.
 After that app will go back to the menu and display user's score.
 ```
+# Graphics I used:
+![Rabbit](images/krolik.png)
+![Background1](images/lake.jpg)
+![Background2](images/lass.jpg)
+
+## Sources:
+```
+stackoverflow.com
+pixabay.com
+```
